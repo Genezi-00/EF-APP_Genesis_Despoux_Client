@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "a9f69ccc-737e-41ec-be56-47371763724a",
+		"name": "Examen Final_AplicacionesWebII",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33407555"
+	},
+	"item": [
+		{
+			"name": "Logueo",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "secret",
+						"username": "client"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "codigo",
+							"value": "U001",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:9000/oauth2/token"
+			},
+			"response": []
+		},
+		{
+			"name": "Probando Autorizacion",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJraWQiOiIwNTYyMjgwYi01MjRjLTQ3NGItOTkyNC03Y2Q3NWVkOWNkZjUiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjbGllbnQiLCJhdWQiOiJjbGllbnQiLCJuYmYiOjE3Mjk1Njc4NzMsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6OTAwMCIsImV4cCI6MTcyOTU2OTY3MywiaWF0IjoxNzI5NTY3ODczLCJqdGkiOiJiYzhkZmFiOC0yMWMzLTQ4MDMtYjliNS0xYjFhODZhZWIyN2MifQ.oEWL6xNRHovwVIhoVoDG5WQDPn4VrckypYJSeHR0FYs026_i3Eb93E83VB_KSzMHP5nv9HO_P1VuqoREty5rZhAy632ZoYl2NQX_hG7IJfnhhATUf6nupiJkm9Haej7wQQKKJFiBxEVYDy9M0i4pqcc60MDGohMTC-emPac1Q7JtyvOCUKmZmfNZ6ktchday59XHPFHLLMaahpMVMnPxqchuFUyE9Pe44jCNhGbThOn40djkkzMyYY-16bd3CxvvzRYtLObAMtwKjdBjiJEOEhPjfzmuqsLdIy0NtQseaMbWdU67YQChal48XC5Xhy9sczNaor10F6OInYFvxNNLDA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "codigo",
+							"value": "U001",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8081/api/private"
+			},
+			"response": []
+		}
+	]
+}
